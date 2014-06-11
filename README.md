@@ -40,3 +40,11 @@ Then you can launch HipHop with:
 	$ grunt run
 
 _Note that `grunt build` has to be done at least once before this._
+
+# Known problems
+
+### Error about missing libudev.so.0
+
+Search for libudev.so.0 on your distribution. Most of the time it can be easily fixed by creating a symbolic link from libudev.so to libudev.so.0
+
+See: https://github.com/rogerwang/node-webkit/wiki/The-solution-of-lacking-libudev.so.0
