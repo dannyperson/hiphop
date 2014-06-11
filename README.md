@@ -29,13 +29,13 @@ And Compass to build the stylesheets:
 
 	$ gem install compass
 
-### Running HipHop
-
-Run at least once to install all the node dependencies:
+You will also need to install all the node dependencies:
 
 	$ npm install
 
-Then you can launch HipHop with:
+### Running HipHop
+
+You can easily launch HipHop with:
 
 	$ grunt run
 
