@@ -1,12 +1,14 @@
 #HipHop [![Dependency Status](https://david-dm.org/hiphopapp/hiphop.svg?theme=shields.io)](https://david-dm.org/hiphopapp/hiphop)
 
-![screenshot](http://gethiphop.net/images/github_screenshot.png)
+![](http://gethiphop.net/images/github_screenshot.png)
+
+Listen instantly to 45 millions songs. 100% Free. No Ads. No Sign up.
 
 ## How does it work?
 
-When searching, the app will use iTunes and Last.fm to display song results (with cover, title, artist). It will then try to find the best match for this song on Youtube and stream the **highest quality audio stream**.
+When searching, HipHop will use iTunes and Last.fm to display song results (with cover, title, artist). It will then try to find the best match for this song on Youtube and stream the **highest quality audio stream**.
 
-No torrents, completely decentralized.
+HipHop **DOES NOT** use torrents and is entirely safe and untraceable, wherever you live.
 
 ## Roadmap
 
@@ -16,12 +18,11 @@ No torrents, completely decentralized.
 - Media keys support on desktop (https://github.com/rogerwang/node-webkit/issues/200)
 - Internationalization (everyone will be able to help on translations)
 - Auto-update
-- Sync Playlists & History between all your devices (tough one as we can't use any backend)
+- Sync Playlists & History between all your devices (tough one)
 - Offline mode for both desktop & mobile apps
-- Kick-ass homescreen (with Top tracks in your country, by genres, etc.)
+- Kick-ass homescreen (with Top tracks in your country, ranking by genres, ...)
 
 And we should keep focusing on:
-
 - Keeping the app simple
 - Improving performance (especially search and playback)
 - Fixing bugs
@@ -29,10 +30,10 @@ And we should keep focusing on:
 - Staying decentralized and impossible to take down
 
 What's NOT a priority and why:
-- Adding more metadata services: HipHop already provide a huge library (iTunes and Last.fm, combined) that satisfies 99.99% of the users
+- Adding more metadata services: HipHop already provides an enormous library of tracks (iTunes and Last.fm, combined)
 - Playing local files (most of them are available for streaming anyway)
-- Working on anything that would require HipHop to have a backend or some sort of centralized system that could be easily be taken down
-- Too advanced features (ex: showing the kbps for the song)
+- Working on anything that would require HipHop to have a backend or some sort of centralized system that could easily be taken down
+- Too advanced features (ex: showing the kbps for the current track)
 
 ## HipHop on the Web
 
