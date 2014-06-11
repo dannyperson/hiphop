@@ -13,7 +13,7 @@ No torrents, completely decentralized.
 I've listed the top 20 articles talking about HipHop here:
 https://github.com/hiphopapp/hiphop/wiki/HipHop-on-the-Web
 
-## Contribute
+# Contribute
 
 Join us on IRC at `#hiphopapp` on freenode ([web access](http://webchat.freenode.net/?channels=hiphopapp)).
 
@@ -21,9 +21,9 @@ Join us on IRC at `#hiphopapp` on freenode ([web access](http://webchat.freenode
 
 ### Requirements
     
-You will Grunt:
+You will need Grunt:
 
-    $ npm install -g grunt-cli
+	$ npm install -g grunt-cli
 
 And Compass to build the stylesheets:
 
@@ -31,12 +31,12 @@ And Compass to build the stylesheets:
 
 ### Running HipHop
 
-Run at least once to install dependencies all the node modules:
+Run at least once to install all the node dependencies:
 
-    $ npm install
+	$ npm install
 
 Then you can launch HipHop with:
 
-    $ grunt run
+	$ grunt run
 
 _Note that `grunt build` has to be done at least once before this._
