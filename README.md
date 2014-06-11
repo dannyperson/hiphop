@@ -8,9 +8,35 @@ When searching, the app will use iTunes and Last.fm to display song results (wit
 
 No torrents, completely decentralized.
 
+## Roadmap
+
+- **Angular.js refactor (*In progress*)**
+- Android & iOS apps (with Cordova)
+- Easy proxy setup (Youtube is blocked at work for many users)
+- Media keys support on desktop (https://github.com/rogerwang/node-webkit/issues/200)
+- Internationalization (everyone will be able to help on translations)
+- Auto-update
+- Sync Playlists & History between all your devices (tough one as we can't use any backend)
+- Offline mode for both desktop & mobile apps
+- Kick-ass homescreen (with Top tracks in your country, by genres, etc.)
+
+And we should keep focusing on:
+
+- Keeping the app simple
+- Improving performance (especially search and playback)
+- Fixing bugs
+- Providing a clean & attractive design
+- Staying decentralized and impossible to take down
+
+What's NOT a priority and why:
+- Adding more metadata services: HipHop already provide a huge library (iTunes and Last.fm, combined) that satisfies 99.99% of the users
+- Playing local files (most of them are available for streaming anyway)
+- Working on anything that would require HipHop to have a backend or some sort of centralized system that could be easily be taken down
+- Too advanced features (ex: showing the kbps for the song)
+
 ## HipHop on the Web
 
-I've listed the top 20 articles talking about HipHop here:
+Here is a list of some of the articles talking about us:
 https://github.com/hiphopapp/hiphop/wiki/HipHop-on-the-Web
 
 # Contribute
