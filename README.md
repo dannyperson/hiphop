@@ -17,9 +17,9 @@ https://github.com/hiphopapp/hiphop/wiki/HipHop-on-the-Web
 
 Join us on IRC at `#hiphopapp` on freenode ([web access](http://webchat.freenode.net/?channels=hiphopapp)).
 
-## Build
+# Build
 
-# Requirements
+### Requirements
     
 You will Grunt:
 
@@ -29,7 +29,7 @@ And Compass to build the stylesheets:
 
 	$ gem install compass
 
-# Running HipHop
+### Running HipHop
 
 Run at least once to install dependencies all the node modules:
 
