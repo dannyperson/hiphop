@@ -2,10 +2,10 @@ request = require('request')
 ytdl = require('ytdl')
 
 itag_priorities = [ # http://en.wikipedia.org/wiki/YouTube > Comparison of YouTube media encoding options
+    172, # audio only, WebM/Vorbis/192
     171, # audio only, WebM/Vorbis/128
     43, # video, VP8/Vorbis/128 (0.6 mbps total)
     140, # audio only, MP4/AAC/128
-    172, # audio only, WebM/Vorbis/192
     141, # audio only, MP4/AAC/256
 ]
 
@@ -27,10 +27,15 @@ spinner_cover = null
 PlayNext = (artist, title, success) ->
     $.each __playerTracklist, (i, track) ->
         if track.artist == artist and track.title == title
+            $('#tracklist-container .track-container').removeClass('playing');
             if i < __playerTracklist.length - 1
                 t = __playerTracklist[i+1]
+                $('#tracklist-container .track-container').eq(i+1).addClass('playing');
             else
                 t = __playerTracklist[0]
+                $('#tracklist-container .track-container').eq(0).addClass('playing');
+
+
             PlayTrack(t.artist, t.title, t.cover_url_medium, t.cover_url_large)
 
 
@@ -144,3 +149,8 @@ $('#player-container #progress-bg').on 'click', (e) ->
     percentage = (e.pageX - $(this).offset().left) / $(this).width()
     videojs('video_player').currentTime(percentage * videojs('video_player').duration())
     $('#player-container #progress-current').css({'width': (percentage) * 100 + '%'})
+
+$('#player-container #volume-bg').on 'click', (e) ->
+    percentage = (e.pageX - $(this).offset().left) / $(this).width()
+    videojs('video_player').volume(percentage)
+    $('#player-container #volume-current').css({'width': (percentage) * 100 + '%'})

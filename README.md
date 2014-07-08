@@ -1,32 +1,73 @@
 #HipHop [![Dependency Status](https://david-dm.org/hiphopapp/hiphop.svg?theme=shields.io)](https://david-dm.org/hiphopapp/hiphop)
 
-![](http://gethiphop.net/images/screenshot.png)
+![](http://gethiphop.net/images/github_screenshot.png)
 
-## Contribute
+## How does it work?
 
-Join us on IRC at `#hiphopapp` on freenode ([web access](http://webchat.freenode.net/?channels=hiphopapp)).
+When searching, HipHop will use iTunes and Last.fm to display song results (with cover, title, artist). It will then try to find the best match for this song on Youtube and stream the **highest quality audio stream**.
 
-## Dependencies
+HipHop **DOES NOT** use torrents and is entirely safe and untraceable, wherever you live.
 
-You will need nodejs and grunt:
+## Roadmap
 
-    $ npm install -g grunt-cli
+- **Angular.js refactor - *In progress***
+- Android & iOS apps (with Cordova)
+- Easy proxy setup (Youtube is blocked at work for many users)
+- Media keys support on desktop (https://github.com/rogerwang/node-webkit/issues/200)
+- Internationalization (everyone will be able to help on translations)
+- Auto-update
+- Sync Playlists & History between all your devices (tough one)
+- Offline mode for both desktop & mobile apps
+- Kick-ass homescreen (with Top tracks in your country, ranking by genres, ...)
 
-And ruby with compass to build the stylesheets. Read [this](http://thesassway.com/beginner/getting-started-with-sass-and-compass) for more information.
+And we should keep focusing on:
 
-## Running and debugging
+- Keeping the app simple
+- Improving performance (especially search and playback)
+- Fixing bugs
+- Providing a clean & attractive design
+- Staying decentralized and impossible to take down
 
-Run at least once to install dependencies and generate JS and CSS files.
+What's NOT a priority and why:
 
-    $ npm install
-    $ grunt
+- Adding more metadata services: HipHop already provides an enormous library of tracks (iTunes and Last.fm, combined)
+- Playing local files (most of them are available for streaming anyway)
+- Working on anything that would require HipHop to have a backend or some sort of centralized system that could easily be taken down
+- Too advanced features (ex: showing the kbps for the current track)
 
-Run node-webkit from the build/cache directory (--debug always on). Note that grunt build has to be done at least once before this.
+## HipHop on the Web
 
-    $ grunt run
+Here is a list of some of the articles talking about us:
 
-## Build
+https://github.com/hiphopapp/hiphop/wiki/HipHop-on-the-Web
 
+# Contribute
+
+We need you! Join us on IRC at `#hiphopapp` on freenode ([web access](http://webchat.freenode.net/?channels=hiphopapp)).
+
+# Build
+
+### Requirements
+    
+You will need Grunt:
+
+	$ npm install -g grunt-cli
+
+And Compass to build the stylesheets:
+
+	$ gem install compass
+
+You will also need to install all the node dependencies:
+
+	$ npm install
+
+### Running HipHop
+
+You can easily launch HipHop with:
+
+	$ grunt run
+
+_Note that `grunt build` has to be done at least once before this._
 Build with:
 
     $ grunt build
@@ -56,3 +97,12 @@ _Note: should add some grunt automation here_
 5. Upload both files to `http://download.gethiphop.net/releases/x.x.x/[mac|win]/`
 
 6. Update `/misc/update.json` accordingly and upload to `http://gethiphop.net/update.json` (*ONLY* when both releases are available for download)
+
+
+# Known problems
+
+### Error about missing libudev.so.0
+
+Search for libudev.so.0 on your distribution. Most of the time it can be easily fixed by creating a symbolic link from libudev.so to libudev.so.0
+
+See: https://github.com/rogerwang/node-webkit/wiki/The-solution-of-lacking-libudev.so.0
